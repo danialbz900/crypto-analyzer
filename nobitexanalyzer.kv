@@ -1,0 +1,59 @@
+<MainLayout>:
+    orientation: 'vertical'
+    padding: 16
+    spacing: 12
+
+    Label:
+        id: title_label
+        font_name: 'Vazirmatn-Regular.ttf'
+        font_size: '24sp'
+        size_hint_y: None
+        height: 50
+        text_size: self.size
+        halign: 'center'
+        valign: 'middle'
+
+    Button:
+        id: analyze_button
+        font_name: 'Vazirmatn-Regular.ttf'
+        text_size: self.size
+        halign: 'center'
+        valign: 'middle'
+        font_size: '18sp'
+        size_hint_y: None
+        height: 60
+        background_color: 0.1, 0.5, 0.6, 1
+        color: 1, 1, 1, 1
+        on_press: root.start_analysis()
+
+    Label:
+        id: status_label
+        font_name: 'Vazirmatn-Regular.ttf'
+        font_size: '16sp'
+        size_hint_y: None
+        height: 40
+        text_size: self.size
+        halign: 'right'
+        valign: 'middle'
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        GridLayout:
+            id: results_grid
+            cols: 1
+            spacing: 12
+            size_hint_y: None
+            height: self.minimum_height
+            padding: [4, 4]
+
+    Label:
+        id: creator_label
+        font_name: 'Vazirmatn-Regular.ttf'
+        font_size: '12sp'
+        size_hint_y: None
+        height: 30
+        color: 0.7, 0.7, 0.7, 1
+        text_size: self.size
+        halign: 'center'
+        valign: 'middle'
